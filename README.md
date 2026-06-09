@@ -100,3 +100,12 @@ paper/
 ```
 
 ## References
+
+1. Wei Xu, Ling Huang, Armando Fox, David Patterson, Michael Jordan. *Detecting Large-Scale System Problems by Mining Console Logs.* Proceedings of the 22nd ACM Symposium on Operating Systems Principles (SOSP), 2009.
+
+2. Jieming Zhu, Shilin He, Pinjia He, Jinyang Liu, Michael R. Lyu. *LogHub: A Large Collection of System Log Datasets for AI-driven Log Analytics.* IEEE International Symposium on Software Reliability Engineering (ISSRE), 2023.
+
+3. Zhihan Jiang, Jinyang Liu, Junjie Huang, Yichen Li, Yintong Huo, Jiazhen Gu, Zhuangbin Chen, Jieming Zhu, Michael R. Lyu. *A Large-scale Evaluation for Log Parsing Techniques: How Far are We?* ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA), 2024.
+
+```
+```
