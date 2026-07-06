@@ -1,0 +1,15 @@
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Generated datasets
+data/processed/*
+!data/processed/.gitkeep
+
+# Trained model files
+*.pkl
+*.joblib
