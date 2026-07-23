@@ -1,4 +1,4 @@
-# Comparing Rule-Based, Supervised, and Unsupervised Approaches for Anomaly Detection in System Logs
+# A Comparative Study of Rule Based, Supervised, and Unsupervised Anomaly Detection for HDFS System Logs
 
 ## Author
 
@@ -13,21 +13,21 @@ Troy University
 **Course:** CS 6625 Specialized Study  
 **Instructor:** Dr. Long Ma  
 **Term:** Term 5, 2026  
-**Status:** In Progress
+**Status:** Completed
 
 ---
 
 ## Abstract
 
-This research investigates the effectiveness of traditional rule-based monitoring compared to supervised and unsupervised machine learning approaches for anomaly detection in distributed system logs. Using the HDFS (Hadoop Distributed File System) dataset, the study evaluates Rule-Based Detection, Logistic Regression, Random Forest, and Isolation Forest models. Performance is measured using accuracy, precision, recall, and F1 score to determine whether machine learning approaches can improve anomaly detection performance over static threshold-based methods.
+This study compares rule based, supervised, and unsupervised approaches for anomaly detection using HDFS (Hadoop Distributed File System) system logs. Four engineered feature sets were evaluated using a Statistical Baseline, Logistic Regression, Random Forest, and Isolation Forest. Model performance was measured using Accuracy, Precision, Recall, and F1 Score to determine how detection method and feature representation influence anomaly detection performance. The experimental results demonstrate that supervised machine learning approaches consistently outperformed both the statistical baseline and the unsupervised Isolation Forest model, with Random Forest achieving the strongest overall performance.
 
 ---
 
 ## Overview
 
-This repository contains the code, datasets, experiments, and research artifacts associated with this study.
+This repository contains the complete implementation, datasets, notebooks, experimental results, and research paper for the comparative study.
 
-Each notebook represents one stage of the experimental pipeline, allowing every step of the study to be reproduced independently from raw data preparation through final model evaluation.
+Each notebook represents one stage of the experimental workflow, allowing the study to be reproduced from raw data preparation through final model evaluation and performance comparison.
 
 ---
 
@@ -53,7 +53,7 @@ The primary files used throughout this study are:
 - Event_occurrence_matrix.csv
 - anomaly_label.csv
 
-These files provide the feature matrix and ground truth labels used for evaluating rule-based, supervised, and unsupervised anomaly detection approaches.
+These files provide the feature matrix and ground truth labels used to evaluate rule based, supervised, and unsupervised anomaly detection approaches.
 
 ---
 
@@ -76,8 +76,8 @@ paper/
 - **data/** contains the original dataset and generated feature sets.
 - **notebooks/** contains the complete experimental workflow.
 - **src/** contains reusable Python utilities.
-- **results/** contains exported evaluation metrics, learned parameters, and model outputs.
-- **paper/** contains research planning documents and manuscript materials.
+- **results/** contains exported evaluation metrics, trained model outputs, and comparison results.
+- **paper/** contains the final research manuscript.
 
 ---
 
@@ -120,55 +120,50 @@ Run the notebooks in the following order:
 
 ---
 
-## Project Status
+## Experimental Results
 
-**Current Phase:** Supervised Model Development
-
-### Completed
-
-- Research topic approved
-- Project plan approved
-- HDFS_v1 dataset acquisition
-- Data exploration
-- Feature engineering
-- Model preparation
-- Statistical rule-based baseline
-- Logistic Regression implementation
-
-### In Progress
-
-- Random Forest implementation
-
-### Upcoming
-
-- Isolation Forest implementation
-- Cross-model performance comparison
-- Final research paper
-
----
-
-## Results
-
-Model evaluation is performed using the following metrics:
+The study evaluates each anomaly detection approach using the following performance metrics:
 
 - Accuracy
 - Precision
 - Recall
 - F1 Score
 
-The statistical baseline establishes a traditional rule-based benchmark, while the machine learning models are evaluated using the same engineered feature sets to enable direct performance comparisons.
+The Statistical Baseline provides a rule based benchmark, while Logistic Regression, Random Forest, and Isolation Forest are evaluated using the same engineered feature sets to enable direct performance comparisons.
 
-Final comparative results across all approaches will be presented after completion of the Random Forest and Isolation Forest experiments.
+Among the evaluated approaches, Random Forest achieved the highest overall performance, followed by Logistic Regression. The Statistical Baseline provided an interpretable benchmark, while Isolation Forest produced the weakest overall performance on the HDFS dataset.
+
+---
+
+## Repository Contents
+
+This repository includes:
+
+- Complete experimental notebooks
+- Feature engineering pipeline
+- Statistical Baseline implementation
+- Logistic Regression implementation
+- Random Forest implementation
+- Isolation Forest implementation
+- Comparative performance evaluation
+- Final IEEE research paper
+- Reproducible dataset archive reference
 
 ---
 
 ## References
 
-1. Wei Xu, Ling Huang, Armando Fox, David Patterson, Michael Jordan. *Detecting Large-Scale System Problems by Mining Console Logs.* Proceedings of the 22nd ACM Symposium on Operating Systems Principles (SOSP), 2009.
+1. Wei Xu, Ling Huang, Armando Fox, David Patterson, Michael Jordan. *Detecting Large Scale System Problems by Mining Console Logs.* Proceedings of the 22nd ACM Symposium on Operating Systems Principles (SOSP), 2009.
 
-2. Jieming Zhu, Shilin He, Pinjia He, Jinyang Liu, Michael R. Lyu. *LogHub: A Large Collection of System Log Datasets for AI-driven Log Analytics.* IEEE International Symposium on Software Reliability Engineering (ISSRE), 2023.
+2. Jieming Zhu, Shilin He, Pinjia He, Jinyang Liu, Michael R. Lyu. *LogHub: A Large Collection of System Log Datasets for AI-driven Log Analytics.* IEEE Transactions on Software Engineering, 2023.
 
-3. Zhihan Jiang, Jinyang Liu, Junjie Huang, Yichen Li, Yintong Huo, Jiazhen Gu, Zhuangbin Chen, Jieming Zhu, Michael R. Lyu. *A Large-scale Evaluation for Log Parsing Techniques: How Far are We?* ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA), 2024.
+3. M. Du, F. Li, G. Zheng, and V. Srikumar. *DeepLog: Anomaly Detection and Diagnosis from System Logs through Deep Learning.* ACM CCS, 2017.
+
+---
+
+## Citation
+
+If you use this repository in academic work, please cite the accompanying research paper.
 
 ---
 
